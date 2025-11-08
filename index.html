@@ -3,191 +3,165 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>M. Leonor Neto</title>
-  <style>
-    :root {
-      --bg-light: #f4f4f4;
-      --bg-dark: #222;
-      --text-light: #222;
-      --text-dark: #f0f0f0;
-      --red: #993333;
-      --teal: #206060;
-      --mustard: #FFB31A;
-    }
+  <title>Elios Nike – Research & Publications</title>
 
+  <style>
+    /* ====== GENERAL LAYOUT ====== */
     body {
-      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      background-color: #faf8f5; /* off-white */
+      color: #222;
+      font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
       margin: 0;
       padding: 0;
-      background-color: var(--bg-dark);
-      color: var(--text-dark);
-      transition: background-color 0.4s, color 0.4s;
+      line-height: 1.6;
     }
 
-    .container {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
-      padding: 2rem;
-      gap: 3rem;
+    header {
+      text-align: center;
+      padding: 4rem 1rem 2rem 1rem;
     }
 
-    img {
-      border-radius: 50%;
+    /* ====== PHOTO & NAME ====== */
+    .profile-photo {
       width: 220px;
-      height: 220px;
+      height: auto;
+      border-radius: 12px; /* not a circle */
       object-fit: cover;
-      box-shadow: 0 0 10px rgba(0,0,0,0.3);
-    }
-
-    .info {
-      max-width: 600px;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     }
 
     h1 {
-      font-size: 3rem;
-      margin-bottom: 0.5rem;
-      color: var(--mustard);
+      font-size: 2.2rem;
+      margin-bottom: 0.3rem;
+      color: #111; /* ensures visibility */
     }
 
     h2 {
-      font-weight: normal;
-      font-size: 1.4rem;
+      font-size: 1.1rem;
+      font-weight: 400;
+      color: #444;
       margin-top: 0;
-      color: var(--text-dark);
     }
 
-    .buttons {
-      margin-top: 1.2rem;
+    /* ====== BIO SECTION ====== */
+    .bio {
+      max-width: 600px;
+      margin: 1.5rem auto;
+      font-size: 1rem;
+      color: #333;
     }
 
-    .buttons a {
-      text-decoration: none;
-      color: var(--bg-dark);
-      background-color: var(--mustard);
-      padding: 0.5rem 1rem;
-      border-radius: 20px;
-      margin-right: 0.5rem;
-      font-size: 0.9rem;
-      transition: opacity 0.3s;
-    }
-
-    .buttons a:hover {
-      opacity: 0.8;
-    }
-
-    /* Theme toggle button */
-    .theme-toggle {
-      position: absolute;
-      top: 1rem;
-      right: 1rem;
-      background: none;
-      border: 1px solid var(--mustard);
-      color: var(--mustard);
-      padding: 0.4rem 0.8rem;
-      border-radius: 5px;
-      cursor: pointer;
-      font-size: 0.9rem;
-    }
-
-    /* Light theme */
-    body.light {
-      background-color: var(--bg-light);
-      color: var(--text-light);
-    }
-
-    body.light h1 {
-      color: var(--red);
-    }
-
-    body.light .buttons a {
-      color: var(--text-light);
-    }
-
-    /* Section styling */
-    .content {
+    /* ====== MAIN CONTENT ====== */
+    main {
       max-width: 800px;
-      margin: 2rem auto 4rem;
-      padding: 0 2rem;
+      margin: 2rem auto;
+      padding: 0 1rem;
     }
 
-    .section {
+    h3 {
+      font-size: 1.5rem;
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 0.4rem;
       margin-top: 3rem;
     }
 
-    .section h3 {
-      font-size: 1.6rem;
-      border-bottom: 2px solid var(--teal);
-      padding-bottom: 0.3rem;
-      margin-bottom: 1rem;
-      color: var(--teal);
+    .pub-item {
+      margin-bottom: 1.5rem;
     }
 
-    ul {
-      list-style: none;
-      padding-left: 0;
+    .pub-title {
+      font-weight: 600;
+      color: #111;
     }
 
-    li {
-      margin-bottom: 1rem;
-      line-height: 1.5;
+    .pub-authors {
+      color: #555;
     }
 
-    @media (max-width: 800px) {
-      .container {
-        flex-direction: column;
-        text-align: center;
-      }
-      img {
-        width: 160px;
-        height: 160px;
-      }
+    .pub-journal {
+      color: #777;
+      font-style: italic;
+    }
+
+    /* ====== LINKS ====== */
+    a {
+      color: #206060;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* ====== FOOTER ====== */
+    footer {
+      text-align: center;
+      color: #777;
+      font-size: 0.9rem;
+      margin: 4rem 0 2rem;
     }
   </style>
 </head>
+
 <body>
-  <button class="theme-toggle" onclick="toggleTheme()">Toggle Theme</button>
+  <header>
+    <img src="me.jpg" alt="Elios Nike" class="profile-photo" />
+    <h1>Elios Nike</h1>
+    <h2>PhD Candidate, Marketing | NYU Stern School of Business</h2>
 
-  <!-- Header -->
-  <div class="container">
-    <div class="info">
-      <h1>M. Leonor Neto</h1>
-      <h2>PhD candidate<br>New York University</h2>
-      <div class="buttons">
-        <a href="mailto:your@email.com">Contact</a>
-        <a href="cv.pdf" target="_blank">CV</a>
-        <a href="https://www.linkedin.com/in/maria-leonor-neto/" target="_blank">LinkedIn</a>
-        <a href="https://scholar.google.com/citations?user=7iplNtgAAAAJ" target="_blank">Scholar</a>
+    <p class="bio">
+      I am a fourth-year PhD candidate in Marketing at NYU Stern, studying judgment and decision-making and prosocial behavior.
+      My research examines how people interpret uncertain information and how communication shapes cooperation and trust.
+    </p>
+  </header>
+
+  <main>
+    <section id="publications">
+      <h3>Publications</h3>
+
+      <div class="pub-item">
+        <div class="pub-title">
+          Communicating Tail Risk Credibly: How Probability Frames Affect Perceived Credibility and Support for Climate Action
+        </div>
+        <div class="pub-authors">
+          Elios Nike, Jane Doe, & John Smith
+        </div>
+        <div class="pub-journal">
+          Journal of Experimental Psychology: General, 2024
+        </div>
+        <a href="#" target="_blank">[PDF]</a>
       </div>
-    </div>
-    <img src="headshot.jpeg" alt="Your portrait" />
-  </div>
 
-  <!-- Main content -->
-  <div class="content">
-    <div class="section">
-      <h3>Manuscripts / Publications</h3>
-      <ul>
-        <li><strong>Author, A., & Author, B.</strong> (Year). *Title of the published paper.* <em>Journal Name</em>.</li>
-        <li><strong>Author, C., Author, D.</strong> (Year). *Another paper title.* <em>Another Journal</em>.</li>
-      </ul>
-    </div>
+      <div class="pub-item">
+        <div class="pub-title">
+          Payment or Donation? How Framing Transactions as Prosocial Affects Perceived Fairness and Engagement
+        </div>
+        <div class="pub-authors">
+          Elios Nike & Alex Brown
+        </div>
+        <div class="pub-journal">
+          Journal of Consumer Research, forthcoming
+        </div>
+        <a href="#" target="_blank">[PDF]</a>
+      </div>
+    </section>
 
-    <div class="section">
-      <h3>Work in Progress</h3>
-      <ul>
-        <li><strong>Title of Working Paper</strong> — short description or coauthors if desired.</li>
-        <li><strong>Another Ongoing Project</strong> — brief detail here.</li>
-      </ul>
-    </div>
-  </div>
+    <section id="working-papers">
+      <h3>Working Papers</h3>
+      <div class="pub-item">
+        <div class="pub-title">
+          Delegating Variety: How Preference for Novelty Shapes When We Let Others Decide
+        </div>
+        <div class="pub-authors">
+          Elios Nike & Sarah Green
+        </div>
+      </div>
+    </section>
+  </main>
 
-  <script>
-    function toggleTheme() {
-      document.body.classList.toggle("light");
-    }
-  </script>
+  <footer>
+    © 2025 Elios Nike
+  </footer>
 </body>
 </html>
