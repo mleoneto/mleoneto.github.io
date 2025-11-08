@@ -4,164 +4,166 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>M. Leonor Neto</title>
-
   <style>
-    /* ====== GENERAL LAYOUT ====== */
+    :root {
+      --bg: #f7f6f3; /* off-white background */
+      --text: #222;
+      --red: #993333;
+      --teal: #206060;
+      --mustard: #FFB31A;
+    }
+
     body {
-      background-color: #faf8f5; /* off-white */
-      color: #222;
-      font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
       margin: 0;
       padding: 0;
-      line-height: 1.6;
+      background-color: var(--bg);
+      color: var(--text);
     }
 
-    header {
-      text-align: center;
-      padding: 4rem 1rem 2rem 1rem;
+    /* ===== HEADER LAYOUT ===== */
+    .container {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      min-height: 90vh;
+      padding: 2rem;
+      gap: 3rem;
     }
 
-    /* ====== PHOTO & NAME ====== */
-    .profile-photo {
-      width: 220px;
+    img {
+      border-radius: 12px;
+      width: 280px;
       height: auto;
-      border-radius: 12px; /* not a circle */
       object-fit: cover;
-      margin-bottom: 1.5rem;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+
+    .info {
+      max-width: 600px;
     }
 
     h1 {
-      font-size: 2.2rem;
-      margin-bottom: 0.3rem;
-      color: #111; /* ensures visibility */
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+      color: var(--red);
     }
 
     h2 {
-      font-size: 1.1rem;
-      font-weight: 400;
-      color: #444;
+      font-weight: normal;
+      font-size: 1.3rem;
       margin-top: 0;
-    }
-
-    /* ====== BIO SECTION ====== */
-    .bio {
-      max-width: 600px;
-      margin: 1.5rem auto;
-      font-size: 1rem;
       color: #333;
     }
 
-    /* ====== MAIN CONTENT ====== */
-    main {
-      max-width: 800px;
-      margin: 2rem auto;
-      padding: 0 1rem;
+    .bio {
+      margin-top: 1.2rem;
+      font-size: 1rem;
+      color: #444;
+      line-height: 1.6;
     }
 
-    h3 {
-      font-size: 1.5rem;
-      border-bottom: 2px solid #ddd;
-      padding-bottom: 0.4rem;
+    .buttons {
+      margin-top: 1.2rem;
+    }
+
+    .buttons a {
+      text-decoration: none;
+      color: var(--bg);
+      background-color: var(--teal);
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      margin-right: 0.5rem;
+      font-size: 0.9rem;
+      transition: opacity 0.3s;
+    }
+
+    .buttons a:hover {
+      opacity: 0.85;
+    }
+
+    /* ===== MAIN CONTENT ===== */
+    .content {
+      max-width: 800px;
+      margin: 3rem auto 4rem;
+      padding: 0 2rem;
+    }
+
+    .section {
       margin-top: 3rem;
     }
 
-    .pub-item {
-      margin-bottom: 1.5rem;
+    .section h3 {
+      font-size: 1.6rem;
+      border-bottom: 3px solid var(--mustard);
+      padding-bottom: 0.3rem;
+      margin-bottom: 1rem;
+      color: var(--teal);
     }
 
-    .pub-title {
-      font-weight: 600;
-      color: #111;
+    ul {
+      list-style: none;
+      padding-left: 0;
     }
 
-    .pub-authors {
-      color: #555;
+    li {
+      margin-bottom: 1rem;
+      line-height: 1.5;
     }
 
-    .pub-journal {
-      color: #777;
-      font-style: italic;
-    }
-
-    /* ====== LINKS ====== */
-    a {
-      color: #206060;
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    /* ====== FOOTER ====== */
-    footer {
-      text-align: center;
-      color: #777;
-      font-size: 0.9rem;
-      margin: 4rem 0 2rem;
+    @media (max-width: 850px) {
+      .container {
+        flex-direction: column;
+        text-align: center;
+      }
+      img {
+        width: 220px;
+      }
+      .buttons a {
+        display: inline-block;
+        margin: 0.3rem;
+      }
     }
   </style>
 </head>
-
 <body>
-  <header>
-    <img src="headshot.jpeg" alt="Elios Nike" class="profile-photo" />
-    <h1>M. Leonor Neto</h1>
-    <h2>PhD Candidate, Marketing | NYU Stern School of Business</h2>
+  <!-- Header -->
+  <div class="container">
+    <div class="info">
+      <h1>M. Leonor Neto</h1>
+      <h2>PhD Candidate, Marketing<br>NYU Stern School of Business</h2>
+      <div class="buttons">
+        <a href="mailto:your@email.com">Contact</a>
+        <a href="cv.pdf" target="_blank">CV</a>
+        <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
+        <a href="https://scholar.google.com/citations?user=XXXX" target="_blank">Scholar</a>
+      </div>
+      <p class="bio">
+        I am a fourth-year PhD candidate in Marketing at NYU Stern, studying judgment and decision-making and prosocial behavior. 
+        My research examines how people interpret uncertain information and how communication shapes cooperation and trust.
+      </p>
+    </div>
+    <img src="headshot.jpeg" alt="headshot" />
+  </div>
 
-    <p class="bio">
-      I am a fifth year PhD candidate in Marketing at NYU Stern, studying judgment and decision-making and prosocial behavior.
-      My research examines how people interpret uncertain information and how communication shapes cooperation and trust.
-    </p>
-  </header>
-
-  <main>
-    <section id="publications">
+  <!-- Main content -->
+  <div class="content">
+    <div class="section">
       <h3>Publications</h3>
+      <ul>
+        <li><strong>Nike, E., Doe, J., & Smith, A.</strong> (2024). *Communicating Tail Risk Credibly: How Probability Frames Affect Perceived Credibility and Support for Climate Action.* <em>Journal of Experimental Psychology: General</em>.</li>
+        <li><strong>Nike, E., & Brown, A.</strong> (Forthcoming). *Payment or Donation? How Framing Transactions as Prosocial Affects Perceived Fairness and Engagement.* <em>Journal of Consumer Research</em>.</li>
+      </ul>
+    </div>
 
-      <div class="pub-item">
-        <div class="pub-title">
-          Communicating Tail Risk Credibly: How Probability Frames Affect Perceived Credibility and Support for Climate Action
-        </div>
-        <div class="pub-authors">
-          Elios Nike, Jane Doe, & John Smith
-        </div>
-        <div class="pub-journal">
-          Journal of Experimental Psychology: General, 2024
-        </div>
-        <a href="#" target="_blank">[PDF]</a>
-      </div>
-
-      <div class="pub-item">
-        <div class="pub-title">
-          Payment or Donation? How Framing Transactions as Prosocial Affects Perceived Fairness and Engagement
-        </div>
-        <div class="pub-authors">
-          Elios Nike & Alex Brown
-        </div>
-        <div class="pub-journal">
-          Journal of Consumer Research, forthcoming
-        </div>
-        <a href="#" target="_blank">[PDF]</a>
-      </div>
-    </section>
-
-    <section id="working-papers">
-      <h3>Working Papers</h3>
-      <div class="pub-item">
-        <div class="pub-title">
-          Delegating Variety: How Preference for Novelty Shapes When We Let Others Decide
-        </div>
-        <div class="pub-authors">
-          Elios Nike & Sarah Green
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    © 2025 Elios Nike
-  </footer>
+    <div class="section">
+      <h3>Work in Progress</h3>
+      <ul>
+        <li><strong>Delegating Variety:</strong> How preference for novelty shapes when we let others decide.</li>
+        <li><strong>Communicating Uncertainty in AI Policy:</strong> Effects of framing on perceived credibility and support for regulation.</li>
+      </ul>
+    </div>
+  </div>
 </body>
 </html>
