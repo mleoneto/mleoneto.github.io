@@ -1,232 +1,193 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Your Name — Research & CV</title>
-  <meta name="description" content="Your Name — short research interests, institution. CV and publications." />
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>M. Leonor Neto</title>
   <style>
-    :root{
-      --bg: #ffffff;
-      --text: #404040; /* your dark gray */
-      --accent1: #993333; /* dark red */
-      --accent2: #206060; /* teal */
-      --accent3: #FFB31A; /* mustard */
-      --muted: #666666;
-      --maxw: 860px;
-      --shadow: 0 6px 18px rgba(64,64,64,0.06);
-      --radius: 12px;
-      --container-pad: 28px;
-      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    :root {
+      --bg-light: #f4f4f4;
+      --bg-dark: #222;
+      --text-light: #222;
+      --text-dark: #f0f0f0;
+      --red: #993333;
+      --teal: #206060;
+      --mustard: #FFB31A;
     }
 
-    html,body{height:100%}
-    body{
-      margin:0;
-      background:var(--bg);
-      color:var(--text);
-      line-height:1.55;
-      -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
-      display:flex;
-      justify-content:center;
-      padding:40px 18px;
+    body {
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: var(--bg-dark);
+      color: var(--text-dark);
+      transition: background-color 0.4s, color 0.4s;
     }
 
-    .wrap{
-      width:100%;
-      max-width:var(--maxw);
-      background:linear-gradient(180deg, rgba(255,255,255,1), rgba(250,250,250,1));
-      box-shadow:var(--shadow);
-      border-radius:calc(var(--radius));
-      padding:var(--container-pad);
+    .container {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 2rem;
+      gap: 3rem;
     }
 
-    header{
-      display:flex;
-      gap:22px;
-      align-items:center;
-      border-bottom:1px solid #efefef;
-      padding-bottom:18px;
-      margin-bottom:20px;
+    img {
+      border-radius: 50%;
+      width: 220px;
+      height: 220px;
+      object-fit: cover;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
     }
 
-    .photo{
-      width:96px;
-      height:96px;
-      flex:0 0 96px;
-      border-radius:12px;
-      overflow:hidden;
-      background:#f6f6f6;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      box-shadow:0 4px 12px rgba(0,0,0,0.05);
-    }
-    .photo img{width:100%; height:100%; object-fit:cover; display:block;}
-
-    .title{
-      flex:1;
-      min-width:0;
-    }
-    .title h1{
-      margin:0;
-      font-size:20px;
-      letter-spacing:-0.2px;
-      color:var(--text);
-    }
-    .title p{
-      margin:6px 0 0 0;
-      color:var(--muted);
-      font-size:14px;
+    .info {
+      max-width: 600px;
     }
 
-    .actions{
-      display:flex;
-      gap:10px;
-      align-items:center;
-    }
-    .btn{
-      display:inline-block;
-      padding:8px 12px;
-      border-radius:8px;
-      text-decoration:none;
-      font-weight:600;
-      font-size:14px;
-      border:1px solid transparent;
-      box-shadow:none;
-    }
-    .btn-primary{
-      background:var(--accent2);
-      color:white;
-    }
-    .btn-outline{
-      background:transparent;
-      color:var(--accent1);
-      border-color:rgba(153,51,51,0.12);
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+      color: var(--mustard);
     }
 
-    main{padding:6px 2px 0 2px}
-
-    section{margin-bottom:20px}
-    h2{
-      margin:0 0 10px 0;
-      font-size:16px;
-      color:var(--text);
-      border-left:4px solid var(--accent3);
-      padding-left:10px;
+    h2 {
+      font-weight: normal;
+      font-size: 1.4rem;
+      margin-top: 0;
+      color: var(--text-dark);
     }
 
-    .bio{
-      color:var(--muted);
-      font-size:15px;
-      margin-bottom:8px;
+    .buttons {
+      margin-top: 1.2rem;
     }
 
-    .pubs{
-      list-style:none;
-      padding-left:0;
-      margin:0;
-    }
-    .pubs li{
-      padding:10px 0;
-      border-bottom:1px dashed #efefef;
-      font-size:15px;
-    }
-    .pubs li .title{
-      font-weight:600;
-      color:var(--text);
-    }
-    .pubs li .meta{
-      color:var(--muted);
-      font-size:13px;
-      margin-top:6px;
+    .buttons a {
+      text-decoration: none;
+      color: var(--bg-dark);
+      background-color: var(--mustard);
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      margin-right: 0.5rem;
+      font-size: 0.9rem;
+      transition: opacity 0.3s;
     }
 
-    footer{
-      margin-top:28px;
-      padding-top:12px;
-      border-top:1px solid #f0f0f0;
-      color:var(--muted);
-      font-size:13px;
-      display:flex;
-      justify-content:space-between;
-      gap:12px;
-      flex-wrap:wrap;
+    .buttons a:hover {
+      opacity: 0.8;
     }
 
-    /* responsive */
-    @media (max-width:640px){
-      header{flex-direction:row; align-items:center}
-      .title h1{font-size:18px}
-      .photo{width:78px; height:78px}
+    /* Theme toggle button */
+    .theme-toggle {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      background: none;
+      border: 1px solid var(--mustard);
+      color: var(--mustard);
+      padding: 0.4rem 0.8rem;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 0.9rem;
+    }
+
+    /* Light theme */
+    body.light {
+      background-color: var(--bg-light);
+      color: var(--text-light);
+    }
+
+    body.light h1 {
+      color: var(--red);
+    }
+
+    body.light .buttons a {
+      color: var(--text-light);
+    }
+
+    /* Section styling */
+    .content {
+      max-width: 800px;
+      margin: 2rem auto 4rem;
+      padding: 0 2rem;
+    }
+
+    .section {
+      margin-top: 3rem;
+    }
+
+    .section h3 {
+      font-size: 1.6rem;
+      border-bottom: 2px solid var(--teal);
+      padding-bottom: 0.3rem;
+      margin-bottom: 1rem;
+      color: var(--teal);
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    li {
+      margin-bottom: 1rem;
+      line-height: 1.5;
+    }
+
+    @media (max-width: 800px) {
+      .container {
+        flex-direction: column;
+        text-align: center;
+      }
+      img {
+        width: 160px;
+        height: 160px;
+      }
     }
   </style>
 </head>
 <body>
-  <div class="wrap" role="main">
-    <header>
-      <div class="photo">
-        <!-- replace headshot.jpg with your image file -->
-        <img src="headshot.jpeg" alt="Your Name">
+  <button class="theme-toggle" onclick="toggleTheme()">Toggle Theme</button>
+
+  <!-- Header -->
+  <div class="container">
+    <div class="info">
+      <h1>M. Leonor Neto</h1>
+      <h2>PhD candidate<br>New York University</h2>
+      <div class="buttons">
+        <a href="mailto:your@email.com">Contact</a>
+        <a href="cv.pdf" target="_blank">CV</a>
+        <a href="https://www.linkedin.com/in/maria-leonor-neto/" target="_blank">LinkedIn</a>
+        <a href="https://scholar.google.com/citations?user=7iplNtgAAAAJ" target="_blank">Scholar</a>
       </div>
-
-      <div class="title" style="min-width:0">
-        <h1>Your Name — PhD Candidate, Department, University</h1>
-        <p class="muted">Research: decision making, risk communication, prosocial behavior. <a href="https://yourinstitution.edu" style="color:var(--accent2); text-decoration:none;">Institution</a></p>
-      </div>
-
-      <div class="actions">
-        <!-- replace cv.pdf with your CV file name -->
-        <a class="btn btn-primary" href="cv.pdf" download>Download CV (PDF)</a>
-        <a class="btn btn-outline" href="mailto:your.email@domain.edu">Contact</a>
-      </div>
-    </header>
-
-    <main>
-      <section id="about">
-        <h2>About</h2>
-        <div class="bio">
-          I am a PhD candidate in [Department] at [University]. My research investigates how people interpret probabilistic forecasts, evaluate policy tradeoffs, and make prosocial decisions under uncertainty. I use experimental methods and surveys to study risk communication and policy evaluation.
-        </div>
-      </section>
-
-      <section id="research">
-        <h2>Selected Publications & Preprints</h2>
-        <ul class="pubs">
-          <!-- Replace items below with your actual papers. Add links where available. -->
-          <li>
-            <div class="title">Smith, A., & YourName, Y. (2025). Title of the paper.</div>
-            <div class="meta">Journal Name. <a href="#" style="color:var(--accent2)">PDF</a> · <em>Published</em></div>
-          </li>
-
-          <li>
-            <div class="title">YourName, Y., & Jones, B. (2024). Another paper title.</div>
-            <div class="meta">Working paper. <a href="#" style="color:var(--accent2)">Preprint</a> · <em>Under review</em></div>
-          </li>
-
-          <li>
-            <div class="title">YourName, Y. (2023). Short project description or poster.</div>
-            <div class="meta">Conference proceedings / In prep</div>
-          </li>
-        </ul>
-      </section>
-
-      <section id="links">
-        <h2>Links</h2>
-        <ul style="margin:0; padding-left:18px; color:var(--muted)">
-          <li><a href="https://scholar.google.com" style="color:var(--accent2)">Google Scholar</a></li>
-          <li><a href="https://orcid.org" style="color:var(--accent2)">ORCID</a></li>
-          <li><a href="https://github.com/yourusername" style="color:var(--accent2)">GitHub</a></li>
-        </ul>
-      </section>
-
-      <footer>
-        <div>© <strong>Your Name</strong></div>
-        <div>Based at <a href="https://yourinstitution.edu" style="color:var(--accent2)">Institution</a> · <a href="mailto:your.email@domain.edu" style="color:var(--accent1)">your.email@domain.edu</a></div>
-      </footer>
-    </main>
+    </div>
+    <img src="headshot.jpeg" alt="Your portrait" />
   </div>
+
+  <!-- Main content -->
+  <div class="content">
+    <div class="section">
+      <h3>Manuscripts / Publications</h3>
+      <ul>
+        <li><strong>Author, A., & Author, B.</strong> (Year). *Title of the published paper.* <em>Journal Name</em>.</li>
+        <li><strong>Author, C., Author, D.</strong> (Year). *Another paper title.* <em>Another Journal</em>.</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h3>Work in Progress</h3>
+      <ul>
+        <li><strong>Title of Working Paper</strong> — short description or coauthors if desired.</li>
+        <li><strong>Another Ongoing Project</strong> — brief detail here.</li>
+      </ul>
+    </div>
+  </div>
+
+  <script>
+    function toggleTheme() {
+      document.body.classList.toggle("light");
+    }
+  </script>
 </body>
 </html>
