@@ -6,10 +6,8 @@
   <title>M. Leonor Neto</title>
   <style>
     :root {
-      --bg-light: #f4f4f4;
-      --bg-dark: #222;
-      --text-light: #222;
-      --text-dark: #f0f0f0;
+      --bg: #f7f6f3; /* off-white background */
+      --text: #222;
       --red: #993333;
       --teal: #206060;
       --mustard: #FFB31A;
@@ -19,21 +17,21 @@
       font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
       margin: 0;
       padding: 0;
-      background-color: var(--bg-dark);
-      color: var(--text-dark);
-      transition: background-color 0.4s, color 0.4s;
+      background-color: var(--bg);
+      color: var(--text);
     }
 
+    /* ===== HEADER LAYOUT ===== */
     .container {
       display: flex;
       flex-direction: row;
       align-items: center;
       justify-content: center;
-      min-height: 100vh;
+      min-height: 90vh;
       padding: 2rem;
       gap: 3rem;
     }
-    
+
     img {
       border-radius: 12px;
       width: 280px;
@@ -49,14 +47,21 @@
     h1 {
       font-size: 3rem;
       margin-bottom: 0.5rem;
-      color: var(--mustard);
+      color: var(--red);
     }
 
     h2 {
       font-weight: normal;
-      font-size: 1.4rem;
+      font-size: 1.3rem;
       margin-top: 0;
-      color: var(--text-dark);
+      color: #333;
+    }
+
+    .bio {
+      margin-top: 1.2rem;
+      font-size: 1rem;
+      color: #444;
+      line-height: 1.6;
     }
 
     .buttons {
@@ -65,8 +70,8 @@
 
     .buttons a {
       text-decoration: none;
-      color: var(--bg-dark);
-      background-color: var(--mustard);
+      color: var(--bg);
+      background-color: var(--teal);
       padding: 0.5rem 1rem;
       border-radius: 20px;
       margin-right: 0.5rem;
@@ -75,10 +80,8 @@
     }
 
     .buttons a:hover {
-      opacity: 0.8;
+      opacity: 0.85;
     }
-
-
 
     /* ===== MAIN CONTENT ===== */
     .content {
@@ -128,22 +131,21 @@
   <!-- Header -->
   <div class="container">
     <div class="info">
-      <h1>Your Name</h1>
-      <h2>Your Affiliation<br>Department of Something, University of Somewhere</h2>
+      <h1>Elios Nike</h1>
+      <h2>PhD Candidate, Marketing<br>NYU Stern School of Business</h2>
       <div class="buttons">
         <a href="mailto:your@email.com">Contact</a>
         <a href="cv.pdf" target="_blank">CV</a>
         <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
         <a href="https://scholar.google.com/citations?user=XXXX" target="_blank">Scholar</a>
       </div>
-    </div>
-    <img src="headshot_s.jpeg" alt="Your portrait" />
-    <p class="bio">
+      <p class="bio">
         I am a fourth-year PhD candidate in Marketing at NYU Stern, studying judgment and decision-making and prosocial behavior. 
         My research examines how people interpret uncertain information and how communication shapes cooperation and trust.
       </p>
+    </div>
+    <img src="yourphoto.jpg" alt="Elios Nike portrait" />
   </div>
-
 
   <!-- Main content -->
   <div class="content">
