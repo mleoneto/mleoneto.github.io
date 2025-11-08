@@ -6,8 +6,10 @@
   <title>M. Leonor Neto</title>
   <style>
     :root {
-      --bg: #f7f6f3; /* off-white background */
-      --text: #222;
+      --bg-light: #f4f4f4;
+      --bg-dark: #222;
+      --text-light: #222;
+      --text-dark: #f0f0f0;
       --red: #993333;
       --teal: #206060;
       --mustard: #FFB31A;
@@ -17,27 +19,27 @@
       font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
       margin: 0;
       padding: 0;
-      background-color: var(--bg);
-      color: var(--text);
+      background-color: var(--bg-dark);
+      color: var(--text-dark);
+      transition: background-color 0.4s, color 0.4s;
     }
 
-    /* ===== HEADER LAYOUT ===== */
     .container {
       display: flex;
       flex-direction: row;
       align-items: center;
       justify-content: center;
-      min-height: 90vh;
+      min-height: 100vh;
       padding: 2rem;
       gap: 3rem;
     }
 
     img {
-      border-radius: 12px;
-      width: 280px;
-      height: auto;
+      border-radius: 50%;
+      width: 220px;
+      height: 220px;
       object-fit: cover;
-      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
     }
 
     .info {
@@ -47,21 +49,14 @@
     h1 {
       font-size: 3rem;
       margin-bottom: 0.5rem;
-      color: var(--red);
+      color: var(--mustard);
     }
 
     h2 {
       font-weight: normal;
-      font-size: 1.3rem;
+      font-size: 1.4rem;
       margin-top: 0;
-      color: #333;
-    }
-
-    .bio {
-      margin-top: 1.2rem;
-      font-size: 1rem;
-      color: #444;
-      line-height: 1.6;
+      color: var(--text-dark);
     }
 
     .buttons {
@@ -70,8 +65,8 @@
 
     .buttons a {
       text-decoration: none;
-      color: var(--bg);
-      background-color: var(--teal);
+      color: var(--bg-dark);
+      background-color: var(--mustard);
       padding: 0.5rem 1rem;
       border-radius: 20px;
       margin-right: 0.5rem;
@@ -80,8 +75,10 @@
     }
 
     .buttons a:hover {
-      opacity: 0.85;
+      opacity: 0.8;
     }
+
+
 
     /* ===== MAIN CONTENT ===== */
     .content {
