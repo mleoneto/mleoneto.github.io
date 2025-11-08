@@ -84,46 +84,35 @@
     }
 
     /* ===== MAIN CONTENT ===== */
-    .content {
+    main {
       max-width: 800px;
-      margin: 3rem auto 4rem;
-      padding: 0 2rem;
+      margin: 2rem auto;
+      padding: 0 1rem;
     }
 
-    .section {
+    h3 {
+      font-size: 1.5rem;
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 0.4rem;
       margin-top: 3rem;
     }
 
-    .section h3 {
-      font-size: 1.6rem;
-      border-bottom: 3px solid var(--mustard);
-      padding-bottom: 0.3rem;
-      margin-bottom: 1rem;
-      color: var(--teal);
+    .pub-item {
+      margin-bottom: 1.5rem;
     }
 
-    ul {
-      list-style: none;
-      padding-left: 0;
+    .pub-title {
+      font-weight: 600;
+      color: #111;
     }
 
-    li {
-      margin-bottom: 1rem;
-      line-height: 1.5;
+    .pub-authors {
+      color: #555;
     }
 
-    @media (max-width: 850px) {
-      .container {
-        flex-direction: column;
-        text-align: center;
-      }
-      img {
-        width: 220px;
-      }
-      .buttons a {
-        display: inline-block;
-        margin: 0.3rem;
-      }
+    .pub-journal {
+      color: #777;
+      font-style: italic;
     }
   </style>
 </head>
@@ -149,22 +138,49 @@
   </div>
 
   <!-- Main content -->
-  <div class="content">
-    <div class="section">
-      <h3>Publications</h3>
-      <ul>
-        <li><strong>Nike, E., Doe, J., & Smith, A.</strong> (2024). *Communicating Tail Risk Credibly: How Probability Frames Affect Perceived Credibility and Support for Climate Action.* <em>Journal of Experimental Psychology: General</em>.</li>
-        <li><strong>Nike, E., & Brown, A.</strong> (Forthcoming). *Payment or Donation? How Framing Transactions as Prosocial Affects Perceived Fairness and Engagement.* <em>Journal of Consumer Research</em>.</li>
-      </ul>
-    </div>
+    <main>
+      <section id="publications">
+      <h3>Publications / Manuscripts</h3>
 
-    <div class="section">
-      <h3>Work in Progress</h3>
-      <ul>
-        <li><strong>Delegating Variety:</strong> How preference for novelty shapes when we let others decide.</li>
-        <li><strong>Communicating Uncertainty in AI Policy:</strong> Effects of framing on perceived credibility and support for regulation.</li>
-      </ul>
-    </div>
-  </div>
+      <div class="pub-item">
+        <div class="pub-title">
+          Communicating Tail Risk Credibly: How Probability Frames Affect Perceived Credibility and Support for Climate Action
+        </div>
+        <div class="pub-authors">
+          Elios Nike, Jane Doe, & John Smith
+        </div>
+        <div class="pub-journal">
+          Journal of Experimental Psychology: General, 2024
+        </div>
+        <a href="#" target="_blank">[PDF]</a>
+      </div>
+
+      <div class="pub-item">
+        <div class="pub-title">
+          Payment or Donation? How Framing Transactions as Prosocial Affects Perceived Fairness and Engagement
+        </div>
+        <div class="pub-authors">
+          Elios Nike & Alex Brown
+        </div>
+        <div class="pub-journal">
+          Journal of Consumer Research, forthcoming
+        </div>
+        <a href="#" target="_blank">[PDF]</a>
+      </div>
+    </section>
+
+    <section id="working-papers">
+      <h3>Working Papers</h3>
+      <div class="pub-item">
+        <div class="pub-title">
+          Delegating Variety: How Preference for Novelty Shapes When We Let Others Decide
+        </div>
+        <div class="pub-authors">
+          Elios Nike & Sarah Green
+        </div>
+      </div>
+    </section>
+  </main>
+  
 </body>
 </html>
