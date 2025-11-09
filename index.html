@@ -64,34 +64,25 @@
       line-height: 1.6;
     }
 
-    /* ===== ICON BUTTONS ===== */
-      .buttons {
-        margin-top: 1rem;
-      }
-      
-      .icon-button {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        background-color: #206060; /* teal */
-        color: #f7f6f3;           /* off-white outline */
-        width: 44px;
-        height: 44px;
-        border-radius: 50%;
-        margin-right: 0.5rem;
-        text-decoration: none;
-        transition: opacity 0.3s, transform 0.2s;
-      }
-      
-      .icon-button:hover {
-        opacity: 0.85;
-        transform: scale(1.1);
-      }
-      
-      .icon-button svg {
-        width: 20px;
-        height: 20px;
-      }
+  .buttons {
+      margin-top: 1.2rem;
+    }
+
+    .buttons a {
+      text-decoration: none;
+      color: var(--bg);
+      background-color: var(--teal);
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      margin-right: 0.5rem;
+      font-size: 0.9rem;
+      transition: opacity 0.3s;
+    }
+
+    .buttons a:hover {
+      opacity: 0.85;
+    }
+
     
     /* ===== MAIN CONTENT ===== */
     main {
@@ -161,46 +152,16 @@
 </head>
 <body>
   <!-- Header -->
-  <div class="container">
+ <div class="container">
     <div class="info">
       <h1>M. Leonor Neto</h1>
       <h2>PhD Candidate<br>New York University</h2>
- 
       <div class="buttons">
-      <!-- Email -->
-      <a href="mailto:mldinisneto@gmail.com" class="icon-button" title="Email">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-          <path d="M4 4h16v16H4z"/>
-          <path d="M4 4l8 8 8-8"/>
-        </svg>
-      </a>
-
-      <!-- CV -->
-      <a href="cv.pdf" target="_blank" class="icon-button" title="CV">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-          <path d="M6 2h12v20H6z"/>
-          <path d="M6 6h12"/>
-        </svg>
-      </a>
-
-      <!-- LinkedIn -->
-      <a href="https://www.linkedin.com/in/maria-leonor-neto/" target="_blank" class="icon-button" title="LinkedIn">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-          <path d="M16 8a6 6 0 016 6v6h-4v-6a2 2 0 00-4 0v6h-4v-6a6 6 0 016-6z"/>
-          <rect x="2" y="9" width="4" height="12"/>
-          <circle cx="4" cy="4" r="2"/>
-        </svg>
-      </a>
-
-      <!-- Google Scholar -->
-      <a href="https://scholar.google.com/citations?user=7iplNtgAAAAJ" target="_blank" class="icon-button" title="Google Scholar">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-          <path d="M12 2l3 7H9l3-7z"/>
-          <path d="M5 20h14v-2H5v2z"/>
-        </svg>
-      </a>
-    </div>
-      
+        <a href="mailto:mldinisneto@gmail.com">Contact</a>
+        <a href="cv.pdf" target="_blank">CV</a>
+        <a href="https://www.linkedin.com/in/maria-leonor-neto/" target="_blank">LinkedIn</a>
+        <a href="https://scholar.google.com/citations?user=7iplNtgAAAAJ" target="_blank">Scholar</a>
+      </div>
       <p class="bio">
        I am a PhD candidate in Marketing (Consumer Behavior) at New York University Stern School of Business. <br>
        My research lies at the intersection of judgement and decision-making, persuasion, and moral and social psychology, with a focus on applying behavioral science to policy-relevant contexts. 
@@ -209,7 +170,6 @@
     </div>
     <img src="headshot.jpeg" alt="headshot" />
   </div>
-      
 
   <!-- Main content -->
     <main>
