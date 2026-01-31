@@ -1,0 +1,187 @@
+:root {
+    --bg: #f7f6f3;
+    /* off-white background */
+    --text: #222;
+    --red: #993333;
+    --teal: #206060;
+    --mustard: #FFB31A;
+}
+
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg);
+    color: var(--text);
+}
+
+/* ===== HEADER LAYOUT ===== */
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    min-height: 70vh;
+    padding: 2rem;
+    gap: 3rem;
+}
+
+img {
+    border-radius: 12px;
+    width: 280px;
+    height: auto;
+    object-fit: cover;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.info {
+    max-width: 600px;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    color: var(--red);
+}
+
+h2 {
+    font-weight: normal;
+    font-size: 1.3rem;
+    margin-top: 0;
+    color: #333;
+}
+
+.bio {
+    margin-top: 1.2rem;
+    font-size: 1rem;
+    color: #444;
+    line-height: 1.6;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    margin-top: 1.2rem;
+}
+
+.buttons a {
+    text-decoration: none;
+    color: var(--bg);
+    background-color: var(--teal);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    margin-right: 0.5rem;
+    font-size: 0.9rem;
+    transition: opacity 0.3s;
+
+    .icon {
+        display: flex;
+        align-items: center;
+        border-radius: 0px;
+        width: 20px;
+        height: 20px;
+    }
+
+    /* .tooltip {
+        position: relative;
+        display: inline-block;
+
+        cursor: pointer;
+
+        .tooltiptext {
+            visibility: hidden;
+
+            width: 130px;
+            background-color: black;
+            color: #ffffff;
+            text-align: center;
+            padding: 5px 0;
+            border-radius: 6px;
+            position: absolute;
+            z-index: 1;
+
+        } */
+}
+
+/* Tooltip text */
+
+
+.buttons a:hover {
+    opacity: 0.85;
+}
+
+
+/* ===== MAIN CONTENT ===== */
+main {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+h3 {
+    color: var(--teal);
+    font-size: 1.5rem;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 0.4rem;
+    margin-top: 3rem;
+}
+
+.pub-item {
+    margin-bottom: 1.5rem;
+}
+
+.pub-title {
+    font-weight: 600;
+    color: #444;
+}
+
+.pub-authors {
+    color: #555;
+}
+
+.pub-journal {
+    color: #777;
+    font-style: italic;
+}
+
+.pub-links a {
+    color: var(--teal);
+    text-decoration: none;
+    margin-left: 0rem;
+}
+
+.pub-links a:hover {
+    opacity: 0.85;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    text-align: center;
+    color: #555;
+    font-size: 0.9rem;
+    margin: 4rem 0 2rem;
+}
+
+@media (max-width: 850px) {
+    .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    img {
+        width: 220px;
+    }
+
+    .buttons {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
+        a {
+
+            margin: 0.3rem;
+        }
+    }
+
+}

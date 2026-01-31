@@ -1,184 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>M. Leonor Neto</title>
-  <style>
-    :root {
-      --bg: #f7f6f3; /* off-white background */
-      --text: #222;
-      --red: #993333;
-      --teal: #206060;
-      --mustard: #FFB31A;
-    }
-
-    body {
-      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: var(--bg);
-      color: var(--text);
-    }
-
-    /* ===== HEADER LAYOUT ===== */
-    .container {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: center;
-      min-height: 70vh;
-      padding: 2rem;
-      gap: 3rem;
-    }
-
-    img {
-      border-radius: 12px;
-      width: 280px;
-      height: auto;
-      object-fit: cover;
-      box-shadow: 0 0 10px rgba(0,0,0,0.2);
-    }
-
-    .info {
-      max-width: 600px;
-    }
-
-    h1 {
-      font-size: 3rem;
-      margin-bottom: 0.5rem;
-      color: var(--red);
-    }
-
-    h2 {
-      font-weight: normal;
-      font-size: 1.3rem;
-      margin-top: 0;
-      color: #333;
-    }
-
-    .bio {
-      margin-top: 1.2rem;
-      font-size: 1rem;
-      color: #444;
-      line-height: 1.6;
-    }
-
-  .buttons {
-      margin-top: 1.2rem;
-    }
-
-    .buttons a {
-      text-decoration: none;
-      color: var(--bg);
-      background-color: var(--teal);
-      padding: 0.5rem 1rem;
-      border-radius: 20px;
-      margin-right: 0.5rem;
-      font-size: 0.9rem;
-      transition: opacity 0.3s;
-    }
-
-    .buttons a:hover {
-      opacity: 0.85;
-    }
-
-    
-    /* ===== MAIN CONTENT ===== */
-    main {
-      max-width: 800px;
-      margin: 2rem auto;
-      padding: 0 1rem;
-    }
-
-    h3 {
-      color: var(--teal);
-      font-size: 1.5rem;
-      border-bottom: 2px solid #ddd;
-      padding-bottom: 0.4rem;
-      margin-top: 3rem;
-    }
-
-    .pub-item {
-      margin-bottom: 1.5rem;
-    }
-
-    .pub-title {
-      font-weight: 600;
-      color: #444;
-    }
-
-    .pub-authors {
-      color: #555;
-    }
-
-    .pub-journal {
-      color: #777;
-      font-style: italic;
-    }
-
-.pub-links a {
-  color: var(--teal);
-  text-decoration: none;
-  margin-left: 0rem;
-}
-
-.pub-links a:hover {
-  opacity: 0.85;
-}
-/* ===== FOOTER ===== */
-    footer {
-      text-align: center;
-      color: #555;
-      font-size: 0.9rem;
-      margin: 4rem 0 2rem;
-    }
-
-    @media (max-width: 850px) {
-      .container {
-        flex-direction: column;
-        text-align: center;
-      }
-      img {
-        width: 220px;
-      }
-      .buttons a {
-        display: inline-block;
-        margin: 0.3rem;
-      }
-    }
-    
-  </style>
+  <!-- <link rel="icon" type="image/x-icon" href="./file.svg"> -->
+  <link rel="stylesheet" type="text/css" href="./styles.css" />
 </head>
+
 <body>
   <!-- Header -->
- <div class="container">
+  <div class="container">
     <div class="info">
       <h1>M. Leonor Neto</h1>
       <h2>PhD Candidate<br>New York University</h2>
       <div class="buttons">
-        <a href="mailto:mldinisneto@gmail.com">Contact</a>
-        <a href="cv.pdf" target="_blank">CV</a>
-        <a href="https://www.linkedin.com/in/maria-leonor-neto/" target="_blank">LinkedIn</a>
-        <a href="https://scholar.google.com/citations?user=7iplNtgAAAAJ" target="_blank">Scholar</a>
+        <a href="mailto:mldinisneto@gmail.com">
+          <!-- <div class="tooltip">
+            <span class="tooltiptext">Email</span>
+          </div> -->
+          <img src="./email.svg" class="icon"></img>
+        </a>
+        <a href="cv.pdf" target="_blank">
+          <img src="./curriculum.svg" class="icon">
+        </a>
+        <a href="https://www.linkedin.com/in/maria-leonor-neto/" target="_blank">
+          <img src="./linkedin.svg" class="icon">
+        </a>
+        <a href="https://scholar.google.com/citations?user=7iplNtgAAAAJ" target="_blank">
+          <img src="./scholar.svg" class="icon">
+        </a>
       </div>
       <p class="bio">
-       I am a PhD candidate in Marketing (Consumer Behavior) at New York University Stern School of Business. <br>
-       My research lies at the intersection of judgement and decision-making, persuasion, and moral and social psychology, with a focus on applying behavioral science to policy-relevant contexts. 
-      Much of my work examines how the framing of information shapes judgment and choice. 
+        I am a PhD candidate in Marketing (Consumer Behavior) at New York University Stern School of Business. <br>
+        My research lies at the intersection of judgement and decision-making, persuasion, and moral and social
+        psychology, with a focus on applying behavioral science to policy-relevant contexts.
+        Much of my work examines how the framing of information shapes judgment and choice.
       </p>
     </div>
     <img src="headshot.jpeg" alt="headshot" />
   </div>
 
   <!-- Main content -->
-    <main>
-      <section id="publications">
+  <main>
+    <section id="publications">
       <h3>Publications / Manuscripts</h3>
 
-         <div class="pub-item">
+      <div class="pub-item">
         <div class="pub-title">
-    Evaluation of S-frame and I-frame policies
+          Evaluation of S-frame and I-frame policies
         </div>
         <div class="pub-authors">
           Neto, M. L., Kim, O. & Jung, M.
@@ -188,9 +59,9 @@
         </div>
       </div>
 
- <div class="pub-item">
+      <div class="pub-item">
         <div class="pub-title">
-In the Eye of the Political Review Storm: How Identity Activation Begets Polarized Reviews
+          In the Eye of the Political Review Storm: How Identity Activation Begets Polarized Reviews
         </div>
         <div class="pub-authors">
           Watson, J., Boegershausen, J., Neto, M. L.
@@ -199,7 +70,7 @@ In the Eye of the Political Review Storm: How Identity Activation Begets Polariz
           In preparation
         </div>
       </div>
-        
+
       <div class="pub-item">
         <div class="pub-title">
           Communicating Tail Risk Credibly
@@ -210,9 +81,10 @@ In the Eye of the Political Review Storm: How Identity Activation Begets Polariz
         <div class="pub-journal">
           OSF, 2025
         </div>
-          <span class="pub-links">
-        <a href="risk_osf.pdf" target="_blank">[PDF]</a> <a href="https://researchbox.org/3595&PEER_REVIEW_passcode=DNJFER" target="_blank">[ResearchBox]</a>
-          </span>
+        <span class="pub-links">
+          <a href="risk_osf.pdf" target="_blank">[PDF]</a> <a
+            href="https://researchbox.org/3595&PEER_REVIEW_passcode=DNJFER" target="_blank">[ResearchBox]</a>
+        </span>
       </div>
 
       <div class="pub-item">
@@ -225,13 +97,14 @@ In the Eye of the Political Review Storm: How Identity Activation Begets Polariz
         <div class="pub-journal">
           SSRN, 2025 - invited for a second round review at Journal of Consumer Research
         </div>
-          <span class="pub-links">
-         <a href="donation_ssrn.pdf" target="_blank">[PDF]</a> <a href="https://researchbox.org/3664&PEER_REVIEW_passcode=ZDRLET" target="_blank">[ResearchBox]</a>
-          </span>
+        <span class="pub-links">
+          <a href="donation_ssrn.pdf" target="_blank">[PDF]</a> <a
+            href="https://researchbox.org/3664&PEER_REVIEW_passcode=ZDRLET" target="_blank">[ResearchBox]</a>
+        </span>
       </div>
 
-        
-<div class="pub-item">
+
+      <div class="pub-item">
         <div class="pub-title">
           Oxytocin and vasopressin modulation of prisoner’s dilemma strategies
         </div>
@@ -241,12 +114,12 @@ In the Eye of the Political Review Storm: How Identity Activation Begets Polariz
         <div class="pub-journal">
           Journal of Psychopharmacology, 2020
         </div>
-           <span class="pub-links">
-           <a href="pd_paper.pdf" target="_blank">[PDF]</a> 
-          </span>
+        <span class="pub-links">
+          <a href="pd_paper.pdf" target="_blank">[PDF]</a>
+        </span>
       </div>
 
-   <div class="pub-item">
+      <div class="pub-item">
         <div class="pub-title">
           Holistic word processing is involved in fast parallel reading
         </div>
@@ -256,14 +129,16 @@ In the Eye of the Political Review Storm: How Identity Activation Begets Polariz
         <div class="pub-journal">
           Journal of Expertise, 2019
         </div>
-         <span class="pub-links">
-           <a href="word_paper.pdf" target="_blank">[PDF]</a> 
+        <span class="pub-links">
+          <a href="word_paper.pdf" target="_blank">[PDF]</a>
         </span>
       </div>
     </section>
 
-      <footer>
-    View this website on <span class="pub-links"><a href="https://github.com/mleoneto/mleoneto.github.io" target="_blank">GitHub</a></span>
-  </footer>
+    <footer>
+      View this website on <span class="pub-links"><a href="https://github.com/mleoneto/mleoneto.github.io"
+          target="_blank">GitHub</a></span>
+    </footer>
 </body>
+
 </html>
